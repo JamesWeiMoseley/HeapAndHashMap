@@ -1,47 +1,22 @@
-# Course: CS261 - Data Structures
-# Assignment: 5
-# Student: James Moseley
-# Description: This is an implementation of a min heap using a dynamic array. 
 
-
-# Import pre-written DynamicArray and LinkedList classes
 from a5_include import *
 
 
 class MinHeapException(Exception):
-    """
-    Custom exception to be used by MinHeap class
-    DO NOT CHANGE THIS CLASS IN ANY WAY
-    """
     pass
 
 
 class MinHeap:
     def __init__(self, start_heap=None):
-        """
-        Initializes a new MinHeap
-        DO NOT CHANGE THIS METHOD IN ANY WAY
-        """
         self.heap = DynamicArray()
-
-        # populate MH with initial values (if provided)
-        # before using this feature, implement add() method
         if start_heap:
             for node in start_heap:
                 self.add(node)
 
     def __str__(self) -> str:
-        """
-        Return MH content in human-readable form
-        DO NOT CHANGE THIS METHOD IN ANY WAY
-        """
         return 'HEAP ' + str(self.heap)
 
     def is_empty(self) -> bool:
-        """
-        Return True if no elements in the heap, False otherwise
-        DO NOT CHANGE THIS METHOD IN ANY WAY
-        """
         return self.heap.length() == 0
 
     #this function will add a new node onto a heap
