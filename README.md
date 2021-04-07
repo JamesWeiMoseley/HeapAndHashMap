@@ -4,3 +4,5 @@ An Implementation of HashMaps that uses a hash table of buckets, each containing
 There is also a min heap implementation that uses a dynamic array to implement a binary tree heap.  
 
 All is written in python. 
+
+Program was made in Oregon State University CS225 Data Structures class.
